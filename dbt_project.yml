@@ -1,0 +1,7 @@
+name: cis_4400_311_project
+version: "1.0.0"
+profile: Bigquery
+
+models:
+  cis_4400_311_project:
+    +materialized: table
