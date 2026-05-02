@@ -7,7 +7,7 @@ WITH location_columns AS (
         location_type,
         city,
         incident_address
-    FROM {{ref('raw_311_complaints')}}
+    FROM {{ref('cleaned_311_complaints')}}
     WHERE borough IS NOT NULL
 )
 

@@ -3,7 +3,7 @@
 WITH agency_columns AS (
   SELECT DISTINCT
     agency_name
-  FROM {{ ref('raw_311_complaints') }}
+  FROM {{ ref('cleaned_311_complaints') }}
   WHERE agency_name IS NOT NULL
 )
 

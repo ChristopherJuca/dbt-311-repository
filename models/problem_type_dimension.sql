@@ -4,7 +4,7 @@ WITH problem_type_columns AS (
   SELECT DISTINCT
     problem_type,
     problem_detail
-  FROM {{ ref('raw_311_complaints') }}
+  FROM {{ ref('cleaned_311_complaints') }}
   WHERE problem_type IS NOT NULL
 )
 

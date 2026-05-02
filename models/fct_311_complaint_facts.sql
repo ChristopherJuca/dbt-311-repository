@@ -17,7 +17,7 @@ date_dimension AS (
 ),
 
 all_complaints AS (
-  SELECT * FROM {{ ref('raw_311_complaints') }}
+  SELECT * FROM {{ ref('cleaned_311_complaints') }}
 )
 
 SELECT
