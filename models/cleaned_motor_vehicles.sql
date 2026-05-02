@@ -15,6 +15,5 @@ SELECT
   `NUMBER OF CYCLIST KILLED` AS number_of_cyclist_killed,
   `CONTRIBUTING FACTOR VEHICLE 1` AS contributing_factor_vehicle_1,
   `VEHICLE TYPE CODE 1` AS vehicle_type_code_1,
-  `VEHICLE TYPE CODE 2` AS vehicle_type_code_2,
   CURRENT_TIMESTAMP() AS loaded_at
 FROM `cis-4400-311-project.nyc_311_raw.motor_vehicle_raw_data`
