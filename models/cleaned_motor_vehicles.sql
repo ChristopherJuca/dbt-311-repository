@@ -1,12 +1,9 @@
-{{config (materialized='table')}}
-
+{{ config(materialized='table') }}
 
 SELECT
   `CRASH DATE` AS crash_date,
   `CRASH TIME` AS crash_time,
   `BOROUGH` AS borough,
-  `ZIP CODE` AS zip_code,
-  `LOCATION` AS location,
   `ON STREET NAME` AS on_street_name,
   `CROSS STREET NAME` AS cross_street_name,
   `OFF STREET NAME` AS off_street_name,
