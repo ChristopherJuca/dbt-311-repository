@@ -30,20 +30,20 @@ SELECT
 
   CURRENT_TIMESTAMP() AS loaded_at
 
-FROM raw_311_complaints
+FROM all_complaints
 
 LEFT JOIN agency_dimension
-  ON raw_311_complaints.agency_name = agency_dimension.agency_name
+  ON all_complaints.agency_name = agency_dimension.agency_name
 
 LEFT JOIN problem_type_dimension
-  ON raw_311_complaints.problem_type = problem_type_dimension.problem_type
- AND raw_311_complaints.problem_detail = problem_type_dimension.problem_detail
+  ON all_complaints.problem_type = problem_type_dimension.problem_type
+ AND all_complaints.problem_detail = problem_type_dimension.problem_detail
 
 LEFT JOIN location_dimension
-  ON raw_311_complaints.borough = location_dimension.borough
+  ON all_complaints.borough = location_dimension.borough
 
 LEFT JOIN date_dimension
-  ON DATE(raw_311_complaints.created_date) = date_dimension.full_date
+  ON DATE(all_complaints.created_date) = date_dimension.full_date
 
 GROUP BY
   agency_dimension.agency_name_dimension_id,
