@@ -16,4 +16,4 @@ SELECT
   `CONTRIBUTING FACTOR VEHICLE 1` AS contributing_factor_vehicle_1,
   `VEHICLE TYPE CODE 1` AS vehicle_type_code_1,
   CURRENT_TIMESTAMP() AS loaded_at
-FROM `cis-4400-311-project.nyc_311_raw.motor_vehicle_raw_data`
+FROM `cis-4400-311-project.nyc_311_raw.motor_vehicle_raw_data_v2`
