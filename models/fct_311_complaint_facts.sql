@@ -39,9 +39,12 @@ LEFT JOIN problem_type_dimension
   ON all_complaints.problem_type = problem_type_dimension.problem_type
  AND all_complaints.problem_detail = problem_type_dimension.problem_detail
 
+--LEFT JOIN location_dimension
+  --ON all_complaints.borough = location_dimension.borough
 LEFT JOIN location_dimension
   ON all_complaints.borough = location_dimension.borough
-
+ AND all_complaints.incident_zip = location_dimension.incident_zip
+ 
 LEFT JOIN date_dimension
   ON DATE(all_complaints.created_date) = date_dimension.full_date
 
