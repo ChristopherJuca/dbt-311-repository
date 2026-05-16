@@ -13,4 +13,4 @@ SELECT
   City AS city,
   Borough AS borough,
   CURRENT_TIMESTAMP() AS loaded_at
-FROM `cis-4400-311-project.nyc_311_raw.311_raw_data`
+FROM `cis-4400-311-project.nyc_311_raw.311_raw_data-v2`
